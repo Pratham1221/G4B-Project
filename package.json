@@ -1,0 +1,20 @@
+{
+	"name": "pratham",
+	"version": "1.0.0",
+	"main": "tailwind.config.js",
+	"dependencies": {
+		"@tailwindcss/aspect-ratio": "^0.4.2",
+		"daisyui": "^2.31.0"
+	},
+	"scripts": {
+		"build": "tailwindcss -i src/main.css -o src/css/output.css",
+		"dev": "tailwindcss -i src/main.css -o src/css/output.css --watch"
+	},
+	"devDependencies": {
+		"tailwindcss": "^3.1.8"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": ""
+}

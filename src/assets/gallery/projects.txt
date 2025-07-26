@@ -1,0 +1,48 @@
+1) BITB attack :-
+
+      create a local host file to demonstrate this attack
+
+
+2) keylogger
+
+     a) Develop a keylogger software for detecting keyboard strokes
+
+     b) Develop software for detecting any keylogger in a system
+
+3)   cryptography
+
+     develop software for decrypting the Caesar Cipher(this is easy)
+
+
+4) RFID 
+
+
+   a)  Create software for blocking RFID scanners from reading your cards. This can be done by masking the tags
+
+
+   b)  Develop an app for identifying readers accessing your cards.
+
+5)  
+
+    a) create a Password Strength Tester to check password complexity
+
+    b)  Write a Password Generator Program to generate strong password
+
+
+6)  create phishing link for any social media account like facebook, instagram, twitter 
+
+
+7) create a github repo for complete bug bounty checklist
+
+8)  Create a Basic Network Scanner using arp request
+
+9) Retrieve a Deleted File :- CREATE simple txt file delete it permanently then recover it with your own tool
+
+10)  Create Secure Backup Plan:-  Research different types of backup plans and create your own backup server to store and save important files, folders, and documents
+
+
+11)  CAPTCHA IMAGES 
+
+12) Write Your Own Bash Script to Automate Recon
+
+13) Write Your Own Bash Script to change mac address

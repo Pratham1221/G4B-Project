@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="lofi" class="bg-base-200">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>The Glasses Project</title>
+		<!-- Tailwind keeps the built css file short by only keeping code for the classes used ! -->
+		<link rel="stylesheet" href="./css/output.css" />
+	</head>
+
+	<style>
+		* {
+			/* For the carousel (CANT FIND THE ELEMENT TO TARGET !!)*/
+			scroll-padding-top: 10em;
+		}
+
+		/* NO need for this now, using `sm:max-w-sm max-w-11/12 mx-auto` instead on images*/
+		/* @media (max-width: 800px) {
+			.right-img {
+				margin-left: 0px !important;
+			}
+		} */
+
+		#media-grid {
+			display: grid;
+			grid-template-columns: repeat(3, minmax(200px, 1fr));
+			grid-gap: 15px;
+		}
+
+		#media-grid img {
+			cursor: pointer;
+		}
+
+		@media (max-width: 600px) {
+			* {
+				scroll-padding-top: 20em;
+			}
+			#media-grid {
+				display: grid;
+				grid-template-columns: repeat(1, minmax(200px, 1fr));
+				grid-gap: 15px;
+			}
+			#comparision {
+				flex-direction: column;
+			}
+			#comparision > div:first-child {
+				padding-bottom: 1em;
+			}
+			/* to fix margin due to flex-col on mobile */
+			#comparision * {
+				margin: 0px !important;
+			}
+		}
+	</style>
+
+	<body
+		class="grid justify-items-center"
+		style="font-family: Arial, Helvetica, sans-serif"
+	>
+		<!-- container  -->
+		<!-- i could go w-full on mobile and using px-$, but ig we cant really go lower than this-->
+		<div class="my-5 w-11/12 sm:w-7/12 space-y-12">
+			<!-- TODO: we need to use max-width and margin combo ! LIKE @ https://radoslawkoziel.pl/ -->
+			<section class="space-y-3 bg-base-200" id="hero">
+				<!-- heading -->
+				<h1 class="text-5xl font-bold text-left my-2 text-primary">
+					Accessibility Glasses for the blind
+				</h1>
+				<!-- heading subtext -->
+				<!-- <p class="text-lg text-slate-700 pl-1 italic"> -->
+				<p class="text-lg pl-1 italic text-secondary">
+					A project focused on assisting the visually impaired by
+					using technology !
+				</p>
+
+				<!-- carousel --we need full width on mobile-->
+				<div class="carousel w-full sm:w-10/12 rounded-lg">
+					<div id="slide1" class="carousel-item relative w-full">
+						<img
+							src="assets/hero.jpg"
+							class="w-full rounded-lg object-contain"
+						/>
+						<div
+							class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+						>
+							<a href="#slide4" onclick="" class="btn btn-circle"
+								>❮</a
+							>
+							<a href="#slide2" onclick="" class="btn btn-circle"
+								>❯</a
+							>
+						</div>
+					</div>
+					<div id="slide2" class="carousel-item relative w-full">
+						<img
+							src="assets/goggles/left-side.jpg"
+							class="w-full rounded-lg"
+						/>
+						<div
+							class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+						>
+							<a href="#slide1" onclick="" class="btn btn-circle"
+								>❮</a
+							>
+							<a href="#slide3" onclick="" class="btn btn-circle"
+								>❯</a
+							>
+						</div>
+					</div>
+					<div id="slide3" class="carousel-item relative w-full">
+						<img
+							src="assets/goggles/back-side.jpg"
+							class="w-full rounded-lg"
+						/>
+						<div
+							class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+						>
+							<a href="#slide2" onclick="" class="btn btn-circle"
+								>❮</a
+							>
+							<a href="#slide4" onclick="" class="btn btn-circle"
+								>❯</a
+							>
+						</div>
+					</div>
+					<div id="slide4" class="carousel-item relative w-full">
+						<img
+							src="assets/goggles/right-side.jpg"
+							class="w-full rounded-lg"
+						/>
+						<div
+							class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+						>
+							<a href="#slide3" onclick="" class="btn btn-circle"
+								>❮</a
+							>
+							<a href="#slide1" onclick="" class="btn btn-circle"
+								>❯</a
+							>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Table of contents -->
+			<section class="space-y-3">
+				<h2 class="text-4xl font-bold pb-4">Table of Contents</h2>
+				<ul>
+					<li class="text-lg list-disc list-inside">
+						<a
+							class="font-semibold text-cyan-600 hover:underline"
+							href="#Introduction"
+							>Introduction</a
+						>
+					</li>
+					<li class="text-lg list-disc list-inside">
+						<a
+							class="font-semibold text-cyan-600 hover:underline"
+							href="#Components"
+							>Components</a
+						>
+					</li>
+					<li class="text-lg list-disc list-inside">
+						<a
+							class="font-semibold text-cyan-600 hover:underline"
+							href="#Working"
+							>Working</a
+						>
+					</li>
+					<li class="text-lg list-disc list-inside">
+						<a
+							class="font-semibold text-cyan-600 hover:underline"
+							href="#Recognition"
+							>Recognition</a
+						>
+					</li>
+					<li class="text-lg list-disc list-inside">
+						<a
+							class="font-semibold text-cyan-600 hover:underline"
+							href="#Media-Gallery"
+							>Image Gallery</a
+						>
+					</li>
+				</ul>
+			</section>
+
+			<section id="Introduction">
+				<h2 class="text-4xl font-bold pb-4">Introduction</h2>
+				<div class="hero">
+					<div
+						class="hero-content flex-col lg:flex-row space-x-2 p-0"
+					>
+						<div>
+							<p class="text-lg">
+								I am
+								<b class="font-semibold">Pratham Bansal </b> ,
+								currently a student at University of British
+								Columbia pursuing a major in maths and computer
+								science. <br />
+								I built this project when I was in high school
+								and is one of my finest, recognized and beloved
+								project. It was not an easy project and took a
+								lot of research and hardwork
+							</p>
+							<p class="text-lg">
+								There were moments in the middle when I thought
+								it is impossible and I might never finish it,
+								but in the end it was all worth it.
+							</p>
+							<p class="text-lg">
+								Most of the components used to build the model
+								have been salvaged from electronic-waste, like
+								the vibration motors were extracted from old bar
+								phones, scroll component was extracted from my
+								old video game controller which no longer worked
+							</p>
+						</div>
+
+						<img
+							src="./assets/introduction new.jpeg"
+							class="rounded-lg shadow-2xl lg:max-h-96 sm:max-w-sm max-w-11/12 mx-auto h-64"
+						/>
+					</div>
+				</div>
+			</section>
+
+			<!-- Components -->
+			<section id="Components">
+				<h2 class="text-4xl font-bold pb-4">Components</h2>
+				<div class="hero">
+					<div
+						class="hero-content flex-col lg:flex-row space-x-2 p-0 w-full justify-between"
+					>
+						<div>
+							<p class="text-lg mb-2">
+								The following components were used to build the
+								glasses
+							</p>
+							<ul>
+								<li class="text-lg list-disc list-inside">
+									<a class="font-semibold"
+										>Ultrasonic sensors</a
+									>
+								</li>
+								<li class="text-lg list-disc list-inside">
+									<a class="font-semibold"
+										>NodeMcu(microcontroller)</a
+									>
+								</li>
+								<li class="text-lg list-disc list-inside">
+									<a class="font-semibold"
+										>Vibration motors</a
+									>
+								</li>
+								<li class="text-lg list-disc list-inside">
+									<a class="font-semibold"
+										>Lithium ion rechargable battery</a
+									>
+								</li>
+								<li class="text-lg list-disc list-inside">
+									<a class="font-semibold">Jumper wires</a>
+								</li>
+								<li class="text-lg list-disc list-inside">
+									<a class="font-semibold">Switches</a>
+								</li>
+								<li class="text-lg list-disc list-inside">
+									<a class="font-semibold">Joystick module</a>
+								</li>
+								<li class="text-lg list-disc list-inside">
+									<a class="font-semibold">Servo motors</a>
+								</li>
+							</ul>
+						</div>
+						<img
+							src="./assets/components/open_box.jpeg"
+							class="rounded-lg shadow-2xl lg:max-h-80 sm:max-w-sm max-w-11/12 mx-auto"
+						/>
+					</div>
+				</div>
+				<!-- early prototype vs Final Model -->
+				<!-- <div
+					class="flex lg:flex-row space-x-2 p-2 mt-6 justify-around"
+					id="comparision"
+				>
+					<div class="container flex justify-start">
+						<div>
+							<h2 class="font-semibold text-lg text-center">
+								Early Prototype
+							</h2>
+							<img
+								src="./assets/hero.jpg"
+								class="rounded-lg shadow-2xl lg:max-h-60 sm:max-w-sm lg:w-96 lg:h-56 object-cover"
+							/>
+						</div>
+					</div>
+					<div class="container flex justify-end">
+						<div class="font-semibold text-lg text-center">
+							<h2 class="font-semibold text-lg">Final Model</h2>
+							<img
+								src="./assets/final_model.jpeg"
+								class="rounded-lg shadow-2xl lg:max-h-96 sm:max-w-sm"
+							/>
+						</div>
+					</div>
+				</div> -->
+			</section>
+
+			<!-- Working -->
+			<section id="Working">
+				<h2 class="text-4xl font-bold pb-4">Working</h2>
+				<div class="hero">
+					<div
+						class="hero-content flex-col lg:flex-row space-x-2 p-0"
+					>
+						<div>
+							<p class="text-lg">
+								The model functions in the following manner, The
+								front of the glasses is equipped with two
+								ultrasonic sensors that are used to detect
+								obstacles in the way. The range of the sensors
+								can be adjusted from 2cm to 400cm <br />
+								Then there are 2 small vibration motors on both
+								side of the glasses, they are used to inform the
+								user about any obstacle in the way. The motors
+								start vibrating at a low-frequency when an
+								obstace is detected far from the user (not a
+								threat) and start vibrating at relatively higher
+								frequencies as the person approaches near the
+								obstacle. <br />
+								All the commands like when to vibrate, how fast
+								to vibrate, when to stop, at what range the
+								obstacles is a threat, are all managed by a
+								microchip(NodeMcu), which lies in a box like a
+								brain of the project. The microchip is powered
+								by a rechargable lithium-ion battery. <br />
+								You can hook that box to your belt and carry it
+								around with ease. The glasses can also be
+								charged from the box. In one charge the glasses
+								will last about 3-4 days on average.
+							</p>
+						</div>
+						<img
+							src="./assets/working.jpeg"
+							class="rounded-lg shadow-2xl lg:max-h-96 sm:max-w-sm max-w-11/12 mx-auto"
+						/>
+					</div>
+				</div>
+				<video
+					controls
+					class="mt-4 rounded-lg shadow-2xl"
+					preload="metadata"
+				>
+					<source
+						src="./assets/demonstration.mp4#t=0.1"
+						type="video/mp4"
+					/>
+				</video>
+
+				<p class="text-lg text-center mt-4 font-semibold">
+					Advance Prototype (Testing a better version of the model)
+				</p>
+
+				<!-- advanced model vs early model -->
+				<div
+					class="flex lg:flex-row p-2 mt-3 justify-around space-y-2"
+					id="comparision"
+				>
+					<div class="container flex justify-start">
+						<div>
+							<video
+								controls
+								class="rounded-lg shadow-2xl"
+								preload="metadata"
+							>
+								<source
+									src="./assets/working.mp4#t=0.1"
+									type="video/mp4"
+								/>
+							</video>
+						</div>
+					</div>
+					<div class="container flex justify-end align-middle">
+						<img
+							src="./assets/final_model.jpeg"
+							class="rounded-lg shadow-2xl lg:max-h-96 sm:max-w-sm object-cover"
+						/>
+						<!-- <div class="font-semibold text-lg text-center">
+						</div> -->
+					</div>
+				</div>
+			</section>
+
+			<!-- Recognition -->
+			<section class="space-y-3" id="Recognition">
+				<h2 class="text-4xl font-bold pb-4">Recognition</h2>
+				<p class="text-lg">
+					Recognised by the school's annual exhibition and GGNIMT
+					Technical institute and bagged first prize in the matrix
+					2019 demostration.
+				</p>
+
+				<img
+					src="./assets/certificate.jpeg"
+					alt="certificate.jpeg"
+					class="w-full"
+				/>
+
+				<p class="text-lg font-semibold">
+					Article published in the local newspaper
+				</p>
+
+				<img
+					src="./assets/news_report_edited.jpeg"
+					alt="certificate.jpeg"
+					class="w-10/12 h-80 object-cover"
+				/>
+			</section>
+
+			<!-- image gallery -->
+			<section id="Media-Gallery">
+				<h2 class="text-4xl font-bold pb-4">Media Gallery</h2>
+				<div id="media-grid"></div>
+				<!-- class="grid grid-flow-row grid-cols-1 grid-rows-1 sm:grid-cols-3 gap-4" -->
+			</section>
+
+			<script>
+				// TODO:
+				// add dynamic support for tiling !
+				// by analysing each images widht and height by loading them manually and adding css class using `grid-col: span 2 / auto;`
+				// add videos
+				const grid = document.querySelector("#media-grid");
+				let classes = ["rounded-lg", "shadow-2xl"];
+
+				let media = [
+					"./assets/gallery/WhatsApp Image 2022-10-03 at 00.42.13 (3).jpeg",
+					"./assets/gallery/WhatsApp Image 2022-10-03 at 00.42.13.jpeg",
+					"./assets/gallery/combined.jpeg",
+					"./assets/gallery/joystick.jpeg",
+					"./assets/gallery/WhatsApp Image 2022-10-03 at 00.40.18 (1).jpeg",
+					"./assets/gallery/WhatsApp Image 2022-10-03 at 00.40.18.jpeg",
+					"./assets/gallery/WhatsApp Image 2022-10-03 at 00.42.13 (1).jpeg",
+					"./assets/gallery/WhatsApp Image 2022-10-03 at 00.40.58 (1).jpeg",
+					"./assets/gallery/WhatsApp Image 2022-10-03 at 00.40.58.jpeg"
+				];
+
+				for (let url of media) {
+					let div = document.createElement("div");
+					let img = makeImg(url);
+					div.appendChild(img);
+					grid.appendChild(div);
+				}
+
+				function makeImg(url) {
+					let img = document.createElement("img");
+					img.src = url;
+					classes.forEach((item) => img.classList.add(item));
+					return img;
+				}
+
+				function makeVideo(url) {
+					let img = document.createElement("video");
+					img.src = url;
+					classes.forEach((item) => img.classList.add(item));
+					return img;
+				}
+			</script>
+		</div>
+	</body>
+</html>

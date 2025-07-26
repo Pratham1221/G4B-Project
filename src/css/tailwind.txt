@@ -1,0 +1,63 @@
+
+
+https://www.youtube.com/results?search_query=best+drop+in+beautiful+css+libraries
+https://tailwindcss.com/docs/installation/play-cdn
+https://tailwindcss.com/docs/utility-first
+file:///C:/Users/harsj/code/sites/pratham/src/index.html
+  https://www.youtube.com/watch?v=N6SXu86bJ6I
+https://github.com/uhub/awesome-css
+
+https://www.youtube.com/watch?v=qYgogv4R8zg
+
+
+fonts
+  https://fonts.google.com/specimen/Averia+Sans+Libre
+  Heebo
+
+gallery:
+https://tailwind-elements.com/docs/standard/components/gallery/
+
+
+Navigation Bar
+  Building
+    coding languages used, components
+  Working
+    videos/photos certificates
+
+
+
+  future plans/ideas
+
+  about me 
+
+  image gallery
+
+  recognition -> cert, news
+
+
+
+
+
+
+
+ http://127.0.0.1:5500/src/index.html
+https://tailwindcss.com/docs/utility-first
+https://tailwindcomponents.com/cheatsheet/
+https://www.w3schools.com/cssref/pr_background-blend-mode.asp
+https://tailwind-elements.com/docs/standard/components/gallery/#section-related-resources
+https://www.capsule.social/
+https://www.arm64.ca/post/browser/
+https://observablehq.com/@mcmcclur/the-kings-problem
+https://mlu-explain.github.io/linear-regression/
+https://www.reddit.com/r/ZephyrusG14/comments/r6m4io/how_to_fix_amd_radeon_software_not_compatible/
+https://www.pexels.com/photo/brown-wooden-parquet-flooring-129731/
+https://tailwindcss.com/docs/background-image
+
+
+
+http://127.0.0.1:5500/src/index.html
+https://photos.google.com/share/AF1QipOdPRDslUmGqaRoeIFZKZJxj2h4ij1zYb1QOz0t0IvmazPPFTiPccL84Gxw5ANGIg?key=bVFuN1BIMmFDbmF2NHEtYXlkd1hUTk43Rm9NRzB3
+https://stackoverflow.com/questions/22042508/how-to-get-html-element-id-using-javascript
+https://github.com/amimaro/tailwindcss-carousel
+https://tailwindcss-carousel.netlify.app/
+https://daisyui.com/components/carousel/#item4
